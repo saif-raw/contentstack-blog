@@ -11,8 +11,17 @@ export default function Home(props) {
   // console.log(data)
   return (
     <div className={styles.container}>
-      <Header />
+      <Header header={props.header} />
       <Footer />
     </div>
   )
 }
+
+export const getStaticProps = async () => {
+  const header = await cmsdata("saif_header");
+  const blogs = await cmsdata("saif_blogs");
+  const footer = await cmsdata("saif_footer");
+  return {
+      props: { header: [...header], blogs: { ...blogs[0] }, footer: [...footer] },
+  };
+};
