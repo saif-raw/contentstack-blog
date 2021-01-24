@@ -1,8 +1,12 @@
 import Stack from "./stack";
 
-export default function CMSdataById(entry_id) {
-  const query = Stack.ContentType("movie_details").Entry(entry_id);
-let entry = query.fetch()
+export default function CMSdataById(id) {
+  const query = Stack.ContentType("saif_blogs")
+    .Entry(id)
+    .includeReference("reference");
+
+  let entry = query
+    .fetch()
     .then(
       function success(entry) {
         return entry.toJSON();

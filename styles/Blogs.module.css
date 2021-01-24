@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.cardWrap {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid #00000034;
+  display: inline-flex;
+  flex-direction: row;
+  width: 70%;
+  height: 20vw;
+  margin-left: 15vw;
+  margin-right: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  color: #fff;
+  font-family: sans-serif;
+}
+.card {
+  /* border: 2px dotted rgb(0, 4, 255); */
+  background: linear-gradient(
+    to bottom,
+    #e84c3d 0%,
+    #e84c3d 26%,
+    #ecedef 26%,
+    #ecedef 100%
+  );
+  /* height: 300px; */
+  /* width: fit-content; */
+  /* position: relative; */
+}
+.cardLeft {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 60%;
+}
+
+.image {
+  /* overflow: hidden; */
+  /* border: 2px dotted rgb(0, 4, 255); */
+  /* padding-top: 2%; */
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 8px;
+}
+
+.cardRight {
+  width: fit-content;
+  width: 40%;
+  border-left: 0.18em dashed #ffffff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.cardRight:before,
+.cardRight:after {
+  /* border: 2px solid black; */
+  display: inline-block;
+  content: "";
+  margin-top: 7.6%;
+  margin-left: 56.3vw;
+  position: absolute;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: #ffffff;
+  border-radius: 50%;
+  left: -0.5em;
+}
+.cardRight:before {
+  top: -0.4em;
+}
+.cardRight:after {
+  bottom: 19.5em;
+  /* wid */
+}
+.header1 {
+  /* border: 2px dotted rgb(255, 217, 0); */
+  font-size: 2.5vw;
+  width: 100%;
+  padding-left: 2vw;
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.header1 .spanClass {
+  font-weight: normal;
+}
+
+.title {
+  /* text-transform: uppercase; */
+  font-weight: normal;
+}
+.header2 {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 1%;
+}
+
+.title {
+  /* border: 2px dotted #09ff00; */
+  /* width: 80%; */
+  height: 20%;
+  font-size: 1.2vw;
+  color: #525252;
+  /* margin: 0; */
+}
+
+.spanClass {
+  color: #797676;
+  font-size: 1vw;
+  margin-top: 3%;
+  padding-right: 3%;
+  float: right;
+}
+
+.eye {
+  /* border: 2px dotted rgb(17, 0, 250); */
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 45%;
+  width: 2.4em;
+  padding-top: 6%;
+  height: 1.6em;
+  background: #fff;
+  /* margin: 0 auto; */
+  border-radius: 1em/0.6em;
+  z-index: 1;
+}
+.eye:before,
+.eye:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+.eye:before {
+  /* border: 2px dotted rgb(17, 0, 250); */
+  width: 1em;
+  height: 1em;
+  background: #e84c3d;
+  z-index: 2;
+  left: 8px;
+  top: 4px;
+}
+.eye:after {
+  width: 0.5em;
+  height: 0.5em;
+  background: #fff;
+  z-index: 3;
+  left: 12px;
+  top: 8px;
+}
+.number {
+  /* border: 2px dotted rgb(0, 4, 255); */
+  margin-top: 2.1vw;
+  /* padding-top: 6vw; */
+  height: 100%;
+  /* overflow: hidden; */
+  border-bottom-right-radius: 8px;
+  height: 75%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.number h3 {
+  color: #e84c3d;
+  margin: 0.9em 0 0 0;
+  font-size: 2.5em;
+}
+.number .spanClass {
+  display: block;
+  color: #a2aeae;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}

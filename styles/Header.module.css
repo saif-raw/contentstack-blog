@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+.headerContainer {
+    /* display: inline; */
+    margin-top: 2%;
+    display: flex;
+	justify-content: flex-end;
+}
+
+.companytitle{
+    font-family: 'Hachi Maru Pop', cursive;
+    padding-right: 55%;
+    font-weight: 900;
+    font-size: 30px;
+}
