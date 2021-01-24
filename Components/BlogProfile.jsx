@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer(props) {
   let movies = props.movies;
-  console.log(movies);
+  // console.log(movies);
 
   return (
     <div className={styles.outerDiv}>
