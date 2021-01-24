@@ -7,7 +7,7 @@ export default function Footer(props) {
   // console.log(props.blogs);
 
   return (
-    <>
+    <div className={styles.bg}>
       {[blogs][0].map((link) => {
         return (
           <Link href={"/blog/" + link.uid}>
@@ -17,7 +17,7 @@ export default function Footer(props) {
 
                 <div className={styles.title}>
                   <p className={styles.header2}>{link.short_description}</p>
-                  <p className={styles.spanClass}>{link.author}</p>
+                  <p className={styles.spanClass}>- {link.author}</p>
                   {/* <img
                   className={styles.image}
                   src={link.image.url}
@@ -40,6 +40,6 @@ export default function Footer(props) {
           </Link>
         );
       })}
-    </>
+    </div>
   );
 }

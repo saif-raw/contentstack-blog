@@ -1,15 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
 
 .headerContainer {
-    /* display: inline; */
-    margin-top: 2%;
-    display: flex;
-	justify-content: flex-end;
+  background: #949494;
+  /* border: 1px dotted black; */
+  /* display: inline; */
+  /* margin-top: 2%; */
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5vw;
 }
 
-.companytitle{
-    font-family: 'Hachi Maru Pop', cursive;
-    padding-right: 55%;
-    font-weight: 900;
-    font-size: 30px;
+.companytitle {
+  /* border: 1px dotted black; */
+  padding-bottom: 0.8vw;
+  color: #e84c3d;
+  font-family: "Hachi Maru Pop", cursive;
+  /* padding-right: 55%; */
+  margin-right: 2vw;
+  font-weight: 900;
+  font-size: 2.3vw;
+}
+
+.searchBar {
+  margin-top: 0.5%;
+  /* border: 1px dotted black; */
+  margin-right: 1vw;
+}
+
+.breadCrumb {
+  font-size: 1.3vw;
+  font-weight: bold;
+  /* border: 1px dotted black; */
+  padding-top: 1.1vw;
+  margin-right: 1.5vw;
+}
+
+.breadCrumbText {
+  color: #e84c3d;
+}
+
+.subs {
+  font-size: 1.3vw;
+  color: #e84c3d;
+  font-weight: bold;
+  /* border: 1px dotted black; */
+  padding-top: 1.1vw;
+  margin-right: 1.6vw;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer .col {
+    width: 50%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
 }

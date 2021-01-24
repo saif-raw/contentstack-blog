@@ -13,36 +13,30 @@ export default function Footer(props) {
   // console.log(props.footer);
 
   return (
-    <div>
-      {/* {footer.link.map ((link) => {
-                    return (
-                        <Link href={link.href}>
-                        <a>{link.link}</a>
-                        </Link>
-                    )
-                })} */}
-
-      <p>{footer.company}</p>
-
-      <div>
+    <div className={styles.bg}>
+      <img
+        className={styles.companyof}
+        src="https://images.contentstack.io/v3/assets/blt137524604e62b5cb/blte814c52ab7983cb7/5ed94783ff1cb239b9500ed0/logo@3x.svg"
+      />{" "}
+      Product
+      <div className={styles.linkDiv}>
         {footer.footerlink.map((link) => {
           return (
             <Link href={link.href} key={link.title}>
-              <a>{link.title}</a>
+              <p className={styles.footerLinks}>{link.title}</p>
             </Link>
           );
         })}
       </div>
-      <div>
+      <div className={styles.socialDiv}>
         <FaFacebook className={styles.socialicon} />
         <FaInstagram className={styles.socialicon} />
         <FaGithub className={styles.socialicon} />
         <FaYoutube className={styles.socialicon} />
         <FaQuora className={styles.socialicon} />
       </div>
-
-      <div>
-        <p>{footer.copyright}</p>
+      <div className={styles.copyrightDiv}>
+        <p className={styles.copyright}>{footer.copyright}</p>
       </div>
     </div>
   );

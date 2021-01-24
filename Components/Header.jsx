@@ -1,5 +1,5 @@
 import "antd/dist/antd.css";
-import { Input, Space } from "antd";
+import { Input, Space, Breadcrumb } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
@@ -17,7 +17,7 @@ export default function Header(props) {
 
   const onSearch = (value) =>
     window.alert(
-      `${value} is a great movie however, Search implementation is for future development`
+      `${value} is a great movie however, search feature will be implemented in the future`
     );
   let header = props.header[0][0];
   // console.log(props.header);
@@ -27,8 +27,35 @@ export default function Header(props) {
       <Link href={header.navlink[0].href}>
         <a className={styles.companytitle}>{header.navlink[0].title}</a>
       </Link>
+      <Breadcrumb className={styles.breadCrumb}>
+        <Breadcrumb.Item className={styles.breadCrumbText}>
+          <a href="/">Home</a>
+        </Breadcrumb.Item>
 
-      <Space direction="vertical">
+        <Breadcrumb.Item>
+          <a className={styles.breadCrumbText} href="/">
+            Login
+          </a>
+        </Breadcrumb.Item>
+
+        <Breadcrumb.Item>
+          <a className={styles.breadCrumbText} href="/">
+            Watchlist
+          </a>
+        </Breadcrumb.Item>
+
+        <Breadcrumb.Item>
+          <a className={styles.breadCrumbText} href="/">
+            Recommend
+          </a>
+        </Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Space
+        direction="vertical"
+        className={styles.searchBar}
+        style={{ width: 600 }}
+      >
         <Search
           placeholder="input search text"
           enterButton="Search"
@@ -37,9 +64,8 @@ export default function Header(props) {
           onSearch={onSearch}
         />
       </Space>
-
       <Link href={header.navlink[1].href}>
-        <a>{header.navlink[1].title}</a>
+        <a className={styles.subs}>{header.navlink[1].title}</a>
       </Link>
     </div>
   );
